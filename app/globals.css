@@ -1,0 +1,242 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@layer base {
+  :root {
+    --background: 48 54% 95%;
+    --foreground: 145 28% 17%;
+    --card: 48 40% 97%;
+    --card-foreground: 145 28% 17%;
+    --popover: 48 40% 97%;
+    --popover-foreground: 145 28% 17%;
+    --primary: 145 28% 17%;
+    --primary-foreground: 48 54% 91%;
+    --secondary: 48 30% 90%;
+    --secondary-foreground: 145 28% 17%;
+    --muted: 48 25% 91%;
+    --muted-foreground: 145 15% 40%;
+    --accent: 28 72% 52%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 48 20% 85%;
+    --input: 48 20% 85%;
+    --ring: 145 28% 17%;
+    --chart-1: 145 28% 17%;
+    --chart-2: 28 72% 52%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+    --radius: 0.75rem;
+    --sidebar-background: 48 54% 95%;
+    --sidebar-foreground: 145 28% 17%;
+    --sidebar-primary: 145 28% 17%;
+    --sidebar-primary-foreground: 48 54% 91%;
+    --sidebar-accent: 48 30% 90%;
+    --sidebar-accent-foreground: 145 28% 17%;
+    --sidebar-border: 48 20% 85%;
+    --sidebar-ring: 145 28% 17%;
+  }
+
+  .dark {
+    --background: 155 22% 5%;
+    --foreground: 60 20% 95%;
+    --card: 155 18% 9%;
+    --card-foreground: 60 20% 95%;
+    --popover: 155 18% 9%;
+    --popover-foreground: 60 20% 95%;
+    --primary: 152 48% 38%;
+    --primary-foreground: 60 40% 98%;
+    --secondary: 155 12% 14%;
+    --secondary-foreground: 60 20% 90%;
+    --muted: 155 12% 14%;
+    --muted-foreground: 130 8% 55%;
+    --accent: 28 72% 52%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 155 12% 16%;
+    --input: 155 12% 16%;
+    --ring: 152 48% 38%;
+    --chart-1: 152 48% 38%;
+    --chart-2: 28 72% 52%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+    --sidebar-background: 155 22% 5%;
+    --sidebar-foreground: 60 20% 95%;
+    --sidebar-primary: 152 48% 38%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 155 12% 14%;
+    --sidebar-accent-foreground: 60 20% 95%;
+    --sidebar-border: 155 12% 16%;
+    --sidebar-ring: 152 48% 38%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer utilities {
+  @keyframes fade-up {
+    from {
+      opacity: 0;
+      transform: translateY(24px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-fade-up {
+    animation: fade-up 0.7s ease-out both;
+  }
+
+  .animation-delay-100 {
+    animation-delay: 0.1s;
+  }
+
+  .animation-delay-200 {
+    animation-delay: 0.2s;
+  }
+
+  .animation-delay-300 {
+    animation-delay: 0.3s;
+  }
+
+  .animation-delay-400 {
+    animation-delay: 0.4s;
+  }
+
+  .animation-delay-500 {
+    animation-delay: 0.5s;
+  }
+}
+
+/* ─── High-End Textures (Optimized Multi-Resolution) ─── */
+@layer components {
+  .texture-paper {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+  }
+
+  .texture-paper::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: -1;
+    opacity: 0.3;
+    background-image: url('/images/illustrations/paper-craft-optimized.webp');
+    /* Mobile: Stack vertically to cover full height */
+    background-repeat: repeat-y;
+    background-size: 100% auto;
+    background-position: top center;
+    /* Reset rotation hacks */
+    transform: none;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    margin: 0;
+  }
+
+  /* Desktop: Remove rotation, use landscape orientation */
+  @media (min-width: 1440px) {
+    .texture-paper::after {
+      background-size: cover;
+      background-repeat: no-repeat;
+      /* Show full texture without zoom */
+      transform: none;
+      /* No rotation on desktop */
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+      margin: 0;
+    }
+  }
+
+  .texture-noise {
+    position: relative;
+    isolation: isolate;
+  }
+
+  .texture-noise::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: -1;
+    opacity: 0.10;
+    background-image: url('/images/illustrations/dark-green-matte-stone.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .texture-dark {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+  }
+
+  .texture-dark::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: -1;
+    opacity: 0.2;
+    background-image: url('/images/illustrations/dark-background2.webp');
+    /* Mobile: Stack vertically to cover full height */
+    background-repeat: repeat-y;
+    background-size: 100% auto;
+    background-position: top center;
+    /* Reset rotation hacks */
+    transform: none;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    margin: 0;
+  }
+
+  /* Desktop: Remove rotation, use landscape orientation */
+  @media (min-width: 1440px) {
+    .texture-dark::after {
+      background-size: cover;
+      background-repeat: no-repeat;
+      /* Show full texture without zoom */
+      transform: none;
+      /* No rotation on desktop */
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+      margin: 0;
+    }
+  }
+}
