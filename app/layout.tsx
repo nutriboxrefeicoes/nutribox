@@ -14,9 +14,51 @@ const playfair = Playfair_Display({
 })
 
 export const metadata: Metadata = {
-  title: 'NutriBox | Refeições Saudáveis em Santa Rita, PB',
+  metadataBase: new URL('https://nutribox.rmenu.com.br'),
+  title: 'NutriBox | Refeições Saudáveis: Santa Rita e João Pessoa',
   description:
-    'NutriBox oferece marmitas fit, sucos naturais, açaí e saladas de frutas com ingredientes selecionados. Delivery e retirada em Santa Rita, PB.',
+    'NutriBox oferece marmitas fit, sucos e mais. Delivery de refeições caseiras e saudáveis em Santa Rita, João Pessoa e Bayeux. Peça já!',
+  alternates: {
+    canonical: '/',
+  },
+  openGraph: {
+    title: 'NutriBox | Refeições Saudáveis: Santa Rita e João Pessoa',
+    description: 'Delivery de refeições caseiras e saudáveis em Santa Rita, João Pessoa e Bayeux.',
+    url: 'https://nutribox.rmenu.com.br',
+    siteName: 'NutriBox',
+    images: [
+      {
+        url: '/images/hero-bowl.webp',
+        width: 1200,
+        height: 630,
+        alt: 'Refeição Saudável NutriBox',
+      },
+    ],
+    locale: 'pt_BR',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'NutriBox | Refeições Saudáveis: Santa Rita e João Pessoa',
+    description: 'Delivery de refeições caseiras e saudáveis em Santa Rita, João Pessoa e Bayeux.',
+    images: ['/images/hero-bowl.webp'],
+  },
+}
+
+const localBusinessSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'LocalBusiness',
+  name: 'NutriBox',
+  image: 'https://nutribox.rmenu.com.br/images/logo.webp', // Assuming absolute URL for schema
+  url: 'https://nutribox.rmenu.com.br',
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: 'Rua Bahia 56',
+    addressLocality: 'Santa Rita',
+    addressRegion: 'PB',
+    addressCountry: 'BR',
+  },
+  areaServed: ['Santa Rita, PB', 'João Pessoa, PB', 'Bayeux, PB'],
 }
 
 export const viewport: Viewport = {
@@ -35,6 +77,10 @@ export default function RootLayout({
       <body
         className={`${dmSans.variable} ${playfair.variable} font-sans antialiased`}
       >
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
+        />
         {children}
         <WhatsAppButton />
       </body>

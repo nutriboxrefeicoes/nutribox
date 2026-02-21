@@ -33,7 +33,7 @@ export function Footer() {
             </div>
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-[#f5f2dc]/70">
               Comida de verdade, feita à mão e com todo amor para nutrir o
-              seu dia a dia em Santa Rita, PB.
+              seu dia a dia em Santa Rita, João Pessoa e região.
             </p>
           </div>
 
