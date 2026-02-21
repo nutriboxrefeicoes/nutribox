@@ -3,7 +3,7 @@ import { Instagram, MapPin } from "lucide-react"
 
 const footerLinks = [
   { label: "Sobre", href: "#sobre" },
-  { label: "Menu", href: "#menu" },
+  { label: "Menu", href: "https://nutribox.rmenu.com.br" },
   { label: "Diferenciais", href: "#diferenciais" },
   { label: "Contato", href: "#contato" },
 ]

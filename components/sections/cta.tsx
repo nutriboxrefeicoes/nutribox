@@ -50,14 +50,18 @@ export function CtaSection() {
             }`}
         >
           <a
-            href="#"
+            href="https://nutribox.rmenu.com.br"
+            target="_blank"
+            rel="noopener noreferrer"
             className="group inline-flex w-full items-center justify-center gap-2.5 rounded-lg bg-[#1f3727]/90 px-8 py-4 text-sm font-semibold uppercase tracking-wide text-[#f5f2dc] shadow-lg transition-all hover:shadow-xl hover:brightness-125 sm:w-auto"
           >
             Faça seu pedido
             <ArrowUpRight className="h-5 w-5 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
           </a>
           <a
-            href="#contato"
+            href="https://wa.me/5583998334460?text=Ol%C3%A1%21+Gostaria+de+mais+informa%C3%A7%C3%B5es+sobre+a+Nutribox."
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex w-full items-center justify-center rounded-lg bg-[#1f3727]/90 px-8 py-4 text-sm font-semibold uppercase tracking-wide text-[#f5f2dc] transition-all hover:brightness-125 sm:w-auto"
           >
             Fale conosco

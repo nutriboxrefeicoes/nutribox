@@ -206,7 +206,9 @@ export function MenuHighlights() {
             }`}
         >
           <a
-            href="#"
+            href="https://nutribox.rmenu.com.br"
+            target="_blank"
+            rel="noopener noreferrer"
             className="group inline-flex items-center gap-2.5 rounded-lg bg-[#1f3727] px-8 py-4 text-base font-semibold text-[#f5f2dc] shadow-md transition-all hover:shadow-lg hover:brightness-125"
           >
             Faça seu pedido

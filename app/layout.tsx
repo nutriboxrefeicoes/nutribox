@@ -23,17 +23,20 @@ export const viewport: Viewport = {
   themeColor: '#2d6a3f',
 }
 
+import { WhatsAppButton } from '@/components/whatsapp-button'
+
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode
 }>) {
   return (
-    <html lang="pt-BR">
+    <html lang="pt-BR" className="scroll-smooth">
       <body
         className={`${dmSans.variable} ${playfair.variable} font-sans antialiased`}
       >
         {children}
+        <WhatsAppButton />
       </body>
     </html>
   )

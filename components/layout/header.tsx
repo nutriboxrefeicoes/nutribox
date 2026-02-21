@@ -7,7 +7,7 @@ import Link from "next/link"
 
 const navLinks = [
   { label: "Sobre", href: "#sobre" },
-  { label: "Nosso Menu", href: "#menu" },
+  { label: "Nosso Menu", href: "https://nutribox.rmenu.com.br" },
   { label: "Diferenciais", href: "#diferenciais" },
   { label: "Contato", href: "#contato" },
 ]
@@ -101,7 +101,9 @@ export function Header() {
         </nav>
 
         <a
-          href="#menu"
+          href="https://nutribox.rmenu.com.br"
+          target="_blank"
+          rel="noopener noreferrer"
           className="hidden items-center gap-2 rounded-lg bg-[#f5f2dc] text-[#0f1d14] px-5 py-2.5 text-sm font-semibold shadow-sm transition-all duration-200 hover:bg-[#e6e2c8] hover:brightness-95 active:scale-[0.97] lg:inline-flex"
         >
           Faça seu pedido
@@ -144,7 +146,9 @@ export function Header() {
             </a>
           ))}
           <a
-            href="#menu"
+            href="https://nutribox.rmenu.com.br"
+            target="_blank"
+            rel="noopener noreferrer"
             onClick={() => setMobileMenuOpen(false)}
             className="mt-3 flex items-center justify-center gap-2 rounded-lg bg-[#f5f2dc] text-[#0f1d14] px-5 py-3 text-sm font-semibold shadow-sm transition-all duration-200 hover:bg-[#e6e2c8] hover:brightness-95 active:scale-[0.97]"
           >
