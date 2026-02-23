@@ -8,6 +8,7 @@ import {
   Carousel,
   CarouselContent,
   CarouselItem,
+  CarouselDots,
 } from "@/components/ui/carousel"
 
 const items = [
@@ -121,7 +122,9 @@ export function MenuHighlights() {
                     }}
                     plugins={[
                       Autoplay({
-                        delay: 3000,
+                        delay: 4000,
+                        stopOnInteraction: false,
+                        stopOnMouseEnter: true,
                       }),
                     ]}
                     className="h-full w-full"
@@ -142,6 +145,9 @@ export function MenuHighlights() {
                         </CarouselItem>
                       ))}
                     </CarouselContent>
+                    <div className="absolute bottom-4 left-0 right-0 z-20">
+                      <CarouselDots />
+                    </div>
                   </Carousel>
                 ) : (
                   <Image
@@ -154,7 +160,7 @@ export function MenuHighlights() {
                   />
                 )}
                 <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-foreground/40 via-transparent to-transparent" />
-                <span className="absolute top-3 left-3 z-10 rounded-full bg-[#1f3727]/90 px-3 py-1 text-[11px] font-semibold uppercase tracking-wide text-[#f5f2dc] backdrop-blur-sm">
+                <span className="absolute top-3 left-3 z-10 rounded-full bg-[#f5f1e5]/90 px-3 py-1 text-[11px] font-bold uppercase tracking-wide text-[#1f3727] backdrop-blur-sm">
                   {item.badge}
                 </span>
               </div>

@@ -59,7 +59,8 @@ export function Hero() {
         </div>
       </div>
 
-      <div className="absolute bottom-10 left-0 right-0 z-10 flex justify-center">
+      {/* Hide on very short screens (like iPhone SE landscape or very short phones) to prevent overlap */}
+      <div className="absolute bottom-6 left-0 right-0 z-10 flex justify-center max-h-[680px]:hidden md:bottom-10">
         <a
           href="#sobre"
           className="animate-bounce rounded-full border border-primary-foreground/20 bg-primary-foreground/10 p-2.5 text-primary-foreground/70 backdrop-blur-sm transition-colors hover:text-primary-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-foreground focus-visible:ring-offset-2 focus-visible:ring-offset-[#0f1d14]"
