@@ -5,31 +5,31 @@ import { useScrollReveal } from "@/hooks/use-scroll-reveal"
 
 const features = [
   {
-    image: "/images/illustrations/qualidade-casa-panela.webp",
+    image: "/images/illustrations/diferenciais/qualidade-casa-panela.svg",
     title: "Qualidade de casa",
     description:
       "Ingredientes que você conhece e confia, preparados como a gente prepara para a nossa família.",
   },
   {
-    image: "/images/illustrations/sem-perder-tempo-marmita.webp",
+    image: "/images/illustrations/diferenciais/sem-perder-tempo-marmita.svg",
     title: "Sem perder tempo",
     description:
       "Comida de verdade na sua mesa sem você perder tempo. É só pedir e aproveitar o seu dia.",
   },
   {
-    image: "/images/illustrations/opcoes-low-cal-balanca.webp",
+    image: "/images/illustrations/diferenciais/opcoes-low-cal-balanca.svg",
     title: "Opções Low Cal",
     description:
       "Pratos leves e equilibrados para você manter a forma comendo o que gosta.",
   },
   {
-    image: "/images/illustrations/zero-conservantes-folhas.webp",
+    image: "/images/illustrations/diferenciais/zero-conservantes-folhas.svg",
     title: "Zero conservantes",
     description:
       "Zero conservantes, 100% sabor. Temperada com ingredientes naturais, fresca como comida de casa deve ser.",
   },
   {
-    image: "/images/illustrations/sabor-abraca-colher.webp",
+    image: "/images/illustrations/diferenciais/sabor-abraca-colher.svg",
     title: "Sabor que abraça",
     description:
       "Esqueça a comida fit sem graça. Aqui, cada prato tem tempero de verdade e aquele gosto que conquista.",
